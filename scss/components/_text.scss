@@ -1,0 +1,47 @@
+.first-comment__paragraph,
+.second-comment__paragraph, .third-comment__paragraph, 
+.fourth-comment__paragraph, .fifth-comment__paragraph {
+    font-size: .65rem;
+    font-family: var(--ff-primary);
+    font-weight: 400;
+}
+
+.walker {
+    &--name {
+        color: var(--White);
+        font-family: var(--ff-primary);
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    &--status {
+        font-size: .7rem;
+        color: var(--Pale-Violet);
+    }
+}
+
+.text-message {
+    font-size: .7rem;
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+}
+
+.subsection {
+    &--heading {
+        color: var(--Very-Dark-Desaturated-Violet);
+        font-size: 2.7rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    &--paragraph {
+        color: var(--Dark-Grayish-Violet);
+        padding: 0 .8rem;
+        font-weight: 500;
+
+        @media (min-width: 62.5em) {
+            padding-left: 0;
+          font-size: .9rem;
+        }
+    }
+}

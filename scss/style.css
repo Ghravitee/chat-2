@@ -1,0 +1,274 @@
+:root {
+  --Pale-Violet: hsl(276, 100%, 81%);
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
+  --ff-primary: "Rubik", sans-serif;
+  --spacer: 1.5rem;
+  --br: 2rem;
+}
+
+/* For box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removes default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* List elements */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+ol {
+  padding-left: 0;
+}
+
+/*  root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Default styles for elements that do not have a class*/
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Global styling for images*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+ul {
+  padding-left: 0;
+}
+
+body {
+  background-color: var(--Light-Grayish-Violet);
+  font-size: 1rem;
+  font-family: var(--ff-primary);
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr 0.7fr 0.1fr;
+  padding: 0.5rem 1rem;
+  align-items: center;
+}
+
+.phone {
+  background-color: var(--White);
+  width: 90%;
+  border-radius: var(--br);
+  padding: 0.7rem;
+}
+
+.top-section {
+  background-image: linear-gradient(to right, var(--Light-Violet), var(--Light-Magenta));
+  border-radius: var(--br) var(--br) 0.5rem 0.5rem;
+}
+
+.walker {
+  margin-left: 0.5rem;
+}
+
+.ellipsis {
+  justify-self: end;
+}
+
+.main-section {
+  background-color: var(--Light-Grayish-Violet);
+  border-radius: 0 0 var(--br) var(--br);
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.first-comment,
+.second-comment,
+.fifth-comment {
+  background-color: hsl(270, 20%, 94%);
+  color: var(--Moderate-Violet);
+  padding: 0.8rem;
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.images {
+  display: flex;
+  gap: 0.6rem;
+  justify-self: end;
+}
+
+.third-comment,
+.fourth-comment {
+  background-color: var(--White);
+  color: var(--Desaturated-Dark-Violet);
+  padding: 0.8rem;
+  width: 60%;
+  border-radius: 1rem;
+  justify-self: end;
+}
+
+.rate-1,
+.rate-2 {
+  background-image: linear-gradient(to left, var(--Light-Violet), var(--Light-Magenta));
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.1fr 0.6fr 0.3fr;
+  padding: 1rem 0.8rem;
+  border-radius: 1.2rem 1.2rem 1.2rem 0.5rem;
+  width: 80%;
+}
+
+.circle {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.time {
+  font-size: 0.7rem;
+  color: var(--White);
+}
+
+.money {
+  font-size: 1.2rem;
+  color: var(--White);
+  font-weight: 800;
+  justify-self: end;
+}
+
+.placeholder {
+  background-color: var(--White);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlay {
+  background-color: var(--White);
+  width: 60%;
+  padding: 1rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 70rem;
+  padding: 3em 1em;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chevron {
+  height: 1rem;
+  width: 1rem;
+  filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+  grid-column: 2/3;
+}
+
+.ellipsis {
+  height: 0.7rem;
+  width: 0.7rem;
+  filter: invert(100%) sepia(16%) saturate(7463%) hue-rotate(222deg) brightness(119%) contrast(115%);
+}
+
+.avatar {
+  border: 2px solid var(--Light-Gray);
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.dog-1,
+.dog-2,
+.dog-3 {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 1rem;
+}
+
+.first-comment__paragraph,
+.second-comment__paragraph, .third-comment__paragraph,
+.fourth-comment__paragraph, .fifth-comment__paragraph {
+  font-size: 0.8rem;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+}
+
+.walker--name {
+  color: var(--White);
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.walker--status {
+  font-size: 0.7rem;
+  color: var(--Pale-Violet);
+}
+
+.text-message {
+  font-size: 0.7rem;
+  color: var(--Grayish-Blue);
+}/*# sourceMappingURL=style.css.map */
